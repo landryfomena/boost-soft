@@ -1,0 +1,15 @@
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\data\User.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\data\UserStatus.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\mail\Mail.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\sms\TwilioConfiguration.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\repository\UserRepository.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\BoostTestApplication.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\service\impl\UserServiceImpl.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\utils\RoleEnum.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\security\CustomUserDetailsService.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\service\api\UserServiceApi.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\mail\EmailServiceImpl.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\controller\UserController.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\security\SecurityConfig.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\sms\TwilioInitializer.java
+C:\Users\zouks\Documents\workspace-spring-tool-suite-4-4.4.1.RELEASE\boostTest\boostTest\src\main\java\boostSoft\boostTest\data\UserType.java
