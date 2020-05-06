@@ -3,8 +3,10 @@ package boostSoft.boostTest.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import boostSoft.boostTest.data.Command;
@@ -19,5 +21,17 @@ public class CommandController {
 	@PostMapping("/register")
 	public HttpEntity<? extends Object> createCommand(@RequestBody Command command){
 		return commandServiceApi.createCommand(command);
+	}
+	@PutMapping("/confirm")
+	public HttpEntity<? extends Object> confirmCommand(@RequestParam Long id){
+		return commandServiceApi.confirmCommand(id);
+	}
+	@PutMapping("/cancel")
+	public HttpEntity<? extends Object> cancelCommand(@RequestParam Long id){
+		return commandServiceApi.confirmCommand(id);
+	}
+	@PutMapping("/delever")
+	public HttpEntity<? extends Object> deleverCommand(@RequestParam Long id){
+		return commandServiceApi.confirmCommand(id);
 	}
 }

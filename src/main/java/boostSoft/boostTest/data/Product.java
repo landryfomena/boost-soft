@@ -5,22 +5,19 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(
-        name = "product",
-        uniqueConstraints = {
-                @UniqueConstraint(columnNames = "title")
-        }
-)
+@Table(name = "product", uniqueConstraints = { @UniqueConstraint(columnNames = "title") })
 
 public class Product {
 
@@ -32,10 +29,9 @@ public class Product {
 	private float price;
 	private Date dateCreation;
 	private String status;
-	
+	@OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JsonIgnore
-	@ManyToMany(cascade = CascadeType.PERSIST)
-	List<Command> commands;
+	private List<ProductCommand> productCommand;
 
 	public Product() {
 		super();
@@ -50,7 +46,6 @@ public class Product {
 		this.price = price;
 		this.dateCreation = dateCreation;
 		this.status = status;
-		this.commands = commands;
 	}
 
 	public Long getProductId() {
@@ -101,19 +96,10 @@ public class Product {
 		this.status = status;
 	}
 
-	public List<Command> getCommands() {
-		return commands;
-	}
-
-	public void setCommands(List<Command> commands) {
-		this.commands = commands;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((commands == null) ? 0 : commands.hashCode());
 		result = prime * result + ((dateCreation == null) ? 0 : dateCreation.hashCode());
 		result = prime * result + Float.floatToIntBits(price);
 		result = prime * result + ((productId == null) ? 0 : productId.hashCode());
@@ -132,11 +118,6 @@ public class Product {
 		if (getClass() != obj.getClass())
 			return false;
 		Product other = (Product) obj;
-		if (commands == null) {
-			if (other.commands != null)
-				return false;
-		} else if (!commands.equals(other.commands))
-			return false;
 		if (dateCreation == null) {
 			if (other.dateCreation != null)
 				return false;
@@ -167,8 +148,7 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", title=" + title + ", quantity=" + quantity + ", price=" + price
-				+ ", dateCreation=" + dateCreation + ", status=" + status + ", commands=" + commands + "]";
+				+ ", dateCreation=" + dateCreation + ", status=" + status + "]";
 	}
-	
-	
+
 }

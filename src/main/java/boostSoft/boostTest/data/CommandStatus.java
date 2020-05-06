@@ -5,7 +5,8 @@ public enum CommandStatus {
 	EN_ATTENTE("EN_ATTENTE"),
 	EN_COURS("EN_COURS"),
 	VALIDE("VALIDE"),
-	TERMINE("TERMINE");
+	TERMINE("TERMINE"),
+	CANCELED("CANCELED");
 	
 	private String statut;
 
