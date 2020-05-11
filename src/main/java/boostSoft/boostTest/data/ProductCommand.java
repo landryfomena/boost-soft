@@ -18,13 +18,11 @@ public class ProductCommand {
 	@Id
 	private Long IdCommandProduct;
 
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "command_id")
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonIgnore
 	private Command command;
 
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "product_id", nullable = false)
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Product product;
 	private int quantityOrdered;
 	private int AvailableQuantity;

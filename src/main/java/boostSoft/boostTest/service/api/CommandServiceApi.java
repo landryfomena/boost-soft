@@ -9,7 +9,7 @@ import boostSoft.boostTest.data.Command;
 public interface CommandServiceApi {
 
 	public abstract HttpEntity<? extends Object> createCommand(Command command);
-	public abstract HttpEntity<? extends Object> confirmCommand(Long id);
-	public abstract HttpEntity<? extends Object> cancelCommand(Long id);
-	public abstract HttpEntity<? extends Object> deleverCommand(Long id);
+	public abstract HttpEntity<? extends Object> confirmCommand(Long commandId);
+	public abstract HttpEntity<? extends Object> cancelCommand(Long commandId);
+	public abstract HttpEntity<? extends Object> deleverCommand(Long commandId);
 }

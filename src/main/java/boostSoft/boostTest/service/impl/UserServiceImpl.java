@@ -41,14 +41,7 @@ public class UserServiceImpl implements UserServiceApi {
 			User currentUser = userRepository.save(user);
 
 			String text = String.format(template.getText());
-			emailServiceImpl.sendSimpleMessage("boost.test.v1@gmail.com", user.getMail(), "Welcome", text);
-
-			/*
-			 * Twilio.init(ACd1667c4efdd5e5790fe7c3254046776b,
-			 * 7b31db8ba18a32eaff173d42b673e960);
-			 */
-			/*Message message = Message.creator(new PhoneNumber(user.getPhoneNumber()), new PhoneNumber("+12052935591"),
-					"your validation code is" + user.getValidateMessage()).create();*/
+			emailServiceImpl.sendSimpleMessage("boost.test.v1@gmail.com", user.getMail(), "Welcome", text + user.getValidateMessage());
 
 			return new ResponseEntity<User>(currentUser, HttpStatus.CREATED);
 		} catch (Exception e) {

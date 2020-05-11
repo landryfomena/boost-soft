@@ -27,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.authorizeRequests()
 				//open the registration and the validation of the account
 
-					.antMatchers("/auth/register","/auth/update","/product/register","/command/register").permitAll()
+					.antMatchers("/auth/register","/auth/update","/auth/validate","/auth/verifyaccount","/auth/resetpassword").permitAll()
 					.antMatchers("/auth/**")
 						.hasAnyRole("CUSTOMER","ADMIN")
 					.antMatchers("/admin/**")

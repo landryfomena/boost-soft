@@ -77,9 +77,9 @@ public class CommandServiceImpl implements CommandServiceApi {
 		
 	}
 	@Override
-	public HttpEntity<? extends Object> confirmCommand(Long id) {
+	public HttpEntity<? extends Object> confirmCommand(Long commandId) {
 		try {
-			Command currentCommand= commandRepository.findById(id).get();
+			Command currentCommand= commandRepository.findById(commandId).get();
 			currentCommand.setStatus(CommandStatus.VALIDE.getStatut());
 			currentCommand=commandRepository.saveAndFlush(currentCommand);
 			return new ResponseEntity<Command>(currentCommand, HttpStatus.ACCEPTED);
@@ -90,9 +90,9 @@ public class CommandServiceImpl implements CommandServiceApi {
 		
 	}
 	@Override
-	public HttpEntity<? extends Object> cancelCommand(Long id) {
+	public HttpEntity<? extends Object> cancelCommand(Long commandId) {
 		try {
-			Command currentCommand= commandRepository.findById(id).get();
+			Command currentCommand= commandRepository.findById(commandId).get();
 			currentCommand.setStatus(CommandStatus.CANCELED.getStatut());
 			currentCommand=commandRepository.saveAndFlush(currentCommand);
 			return new ResponseEntity<Command>(currentCommand, HttpStatus.ACCEPTED);
@@ -102,9 +102,9 @@ public class CommandServiceImpl implements CommandServiceApi {
 		}
 			}
 	@Override
-	public HttpEntity<? extends Object> deleverCommand(Long id) {
+	public HttpEntity<? extends Object> deleverCommand(Long commandId) {
 		try {
-			Command currentCommand= commandRepository.findById(id).get();
+			Command currentCommand= commandRepository.findById(commandId).get();
 			currentCommand.setStatus(CommandStatus.TERMINE.getStatut());
 			currentCommand=commandRepository.saveAndFlush(currentCommand);
 			return new ResponseEntity<Command>(currentCommand, HttpStatus.ACCEPTED);

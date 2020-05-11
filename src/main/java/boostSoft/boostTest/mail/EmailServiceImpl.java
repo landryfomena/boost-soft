@@ -23,7 +23,7 @@ public class EmailServiceImpl {
 	@Bean
 	public SimpleMailMessage templateSimpleMessage() {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setText("Welcome !! thank you for your registration, now validated your account first");
+		message.setText("Welcome !! thank you for your registration, your activation code is :");
 		return message;
 	}
 

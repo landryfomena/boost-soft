@@ -1,0 +1,33 @@
+
+//COMMAND
+{
+  "totalPrice":0,
+	"customerPhone":"1234",
+"productCommand":[{
+	"quantityOrdered":10,
+   "product":{
+   	 "productId": 2,
+    "title": "pistache",
+    "quantity": 30,
+    "price": 3000.0,
+    "dateCreation": "2020-05-06T01:20:35.808+0000",
+    "status": "DISPONIBLE"
+   }
+},{
+	"quantityOrdered":10,
+   "product":{
+   	 "productId": 1,
+    "title": "pistache2",
+    "quantity": 30,
+    "price": 4000.0,
+    "dateCreation": "2020-05-06T05:27:10.315+0000",
+    "status": "DISPONIBLE"
+   }
+}]
+},
+//PRODUIT
+{
+ "title":"pistache",
+ "quantity":30,
+ "price":4000
+}

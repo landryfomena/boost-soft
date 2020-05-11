@@ -23,15 +23,15 @@ public class CommandController {
 		return commandServiceApi.createCommand(command);
 	}
 	@PutMapping("/confirm")
-	public HttpEntity<? extends Object> confirmCommand(@RequestParam Long id){
-		return commandServiceApi.confirmCommand(id);
+	public HttpEntity<? extends Object> confirmCommand(@RequestParam Long commandId){
+		return commandServiceApi.confirmCommand(commandId);
 	}
 	@PutMapping("/cancel")
-	public HttpEntity<? extends Object> cancelCommand(@RequestParam Long id){
-		return commandServiceApi.confirmCommand(id);
+	public HttpEntity<? extends Object> cancelCommand(@RequestParam Long commandId){
+		return commandServiceApi.cancelCommand(commandId);
 	}
 	@PutMapping("/delever")
-	public HttpEntity<? extends Object> deleverCommand(@RequestParam Long id){
-		return commandServiceApi.confirmCommand(id);
+	public HttpEntity<? extends Object> deleverCommand(@RequestParam Long commandId){
+		return commandServiceApi.deleverCommand(commandId);
 	}
 }
